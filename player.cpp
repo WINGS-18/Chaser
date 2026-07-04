@@ -2,9 +2,12 @@
 #include "player.h"
 
 namespace Chaser {
-    Player::Player(Vector2C c, int s, char ap) : Character(c, s, ap) {}
+    
+    Player::Player(Vector2C c, int s, char ap) : Character(c, s, ap) {
+        std::cout << "Player Created" << std::endl;
+    }     //Constructor defination
 
-    void Player::pMovement(char key) {
+    void Player::pMovement(char key) {      //moves the player
         switch(key) {
             case 'a' : 
                 p_coord.v_x--;

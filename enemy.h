@@ -9,8 +9,8 @@ namespace Chaser {
     public:
         Enemy(Vector2C c, int s, char ap);        //enemy constructor declaration
 
-        void eMovement(const Player& p);
+        void eMovement(const Player& p);        //enemy movement
 
-        void speedBooster(const Player& p);
+        void speedBooster(const Player& p);     //increases the speed of the enemy
     };
 }
