@@ -11,6 +11,6 @@ namespace Chaser {
 
         void eMovement(const Player& p);        //enemy movement
 
-        void speedBooster(const Player& p);     //increases the speed of the enemy
+        //void speedBooster(const Player& p);     //increases the speed of the enemy
     };
 }
