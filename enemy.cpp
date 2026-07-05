@@ -20,13 +20,14 @@ namespace Chaser {
         }
     }
 
-    void Enemy::speedBooster(const Player& u) {
-        if(p_invSpeed > g_minInvSpeed){
-            if(g_winCon - u.getPosition() < treshold) {
-                p_invSpeed--;
-            }else if(p_invSpeed < g_maxInvSpeed) {
-                p_invSpeed++;
-            }
-        }
-    }
+    //some errors might occur
+    // void Enemy::speedBooster(const Player& u) {
+    //     if(p_invSpeed > g_minInvSpeed) {
+    //         if(u.getPosition() > treshold) {
+    //             p_invSpeed--;
+    //         }
+    //     }else if(p_invSpeed < g_maxInvSpeed) {
+    //         p_invSpeed++;
+    //     }
+    // }
 }
