@@ -1,6 +1,4 @@
 #pragma once
-
-#include <iostream>
 #include <array>
 
 namespace Chaser {
@@ -20,7 +18,7 @@ namespace Chaser {
         void clearScreen();        //clears the terminal
     };
 
-    
+
 
     /*Learnt that keeping both function declaration and function defination in the class,
     it treats them as different function hence we get error of "overloading not possible.
