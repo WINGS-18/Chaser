@@ -25,8 +25,8 @@ namespace Chaser {
             return {v_x - other.v_x, v_y - other.v_y};
         }
 
-        bool operator<(const Vector2C& other) const {        //operator overloading (<)
-            if(v_x < other.v_x && v_y < other.v_y)    return true;
+        bool operator>(const Vector2C& other) const {        //operator overloading (<)
+            if(v_x > other.v_x && v_y > other.v_y)    return true;
             return false;
         }
 
