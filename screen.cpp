@@ -3,15 +3,14 @@
 
 namespace Chaser {
 
-    template <typename T>
-    void Screen::insertEntity(const T& entity) {                //inserts entity into the screen
-        m_frame[entity.p_getY()][entity.p_getX()] = entity.p_getAppearence();
-    }
-
     void Screen::screenReset() {        //removes all the entities from the screen
         for(auto& row: m_frame) {
             row.fill(' ');
         }
+    }
+
+    Screen::Screen() {      //constructor defination
+        screenReset();
     }
 
     void Screen::printScreen() {                    //prints the screen
