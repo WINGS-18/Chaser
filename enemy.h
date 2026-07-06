@@ -3,6 +3,7 @@
 
 namespace Chaser {
 
+    /*forward declaration*/
     class Player;
 
     class Enemy : public Character {
