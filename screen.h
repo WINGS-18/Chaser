@@ -21,7 +21,7 @@ namespace Chaser {
 
 
     /*Learnt that keeping both function declaration and function defination in the class,
-    it treats them as different function hence we get error of "overloading not possible.
+    it treats them as different function hence we get error of "overloading not possible".
     So either we can declare the function inside class and write the defination outside the
     class or write the defination inside the class with any declaration*/
 
@@ -29,7 +29,7 @@ namespace Chaser {
 
     /*Writing template function declaration in .h file and defination in the .cpp file won't
     work, because complier do not generate the machine code for template function as it doesn't
-    knwo what parameter will come in it. Hence, as we know each files are complied individually
+    know what parameter will come in it. Hence, as we know each files are complied individually
     and later the linker links these files, so for the linker is unable to find the machine code
     of the template function hence it throws the error*/
 
