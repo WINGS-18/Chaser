@@ -30,6 +30,11 @@ namespace Chaser {
             return false;
         }
 
+        bool operator<(const Vector2C& other) const {        //operator overloading (>)
+            if(v_x < other.v_x && v_y < other.v_y)    return true;
+            return false;
+        }
+
     };
     
 }
