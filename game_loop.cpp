@@ -16,26 +16,26 @@ namespace Chaser {
     /*milliseconds instance takes in integer*/
     /*sleep_for is a global free function*/
 
-    void GameLoop::sleep(int time) {
+    void GameLoop::sleep(int time) {        //stops the program for time milliseconds
         std::this_thread::sleep_for(std::chrono::milliseconds(time));
     }
 
-    const char GameLoop::c_keyGiver() {
+    const char GameLoop::c_keyGiver() {     //returns the key which is pressed
         if(_kbhit()) {
             return _getch();
         }
         return '\0';
     }
 
-    bool GameLoop::gameEnd(char key) {
+    bool GameLoop::gameEnd(char key) {      //end the game immediately
         if(key == 'e')  return true;
         return false;
     }
 
-    bool GameLoop::resultDisplay(const Enemy& e, const Player& p) {
+    bool GameLoop::resultDisplay(const Enemy& e, const Player& p) { //displays the results weather win or loose
         if(Collision::winCheck(p)) {
             std::cout << "YOU WIN!\n" << std::endl;
-            return true;
+            return true;                                            //also returns a boolean
         }
 
         if(Collision::playerCought(e, p)) {
@@ -44,7 +44,22 @@ namespace Chaser {
         }
 
         return false;
+    }
 
+    void GameLoop::pauseGame(char key) {
+        if(key == 'p') {
+
+            /*a while loops that keeps running the sleep
+            code untill user wants to resume*/
+
+            while(true) {
+                if(c_keyGiver() != 'r') {
+                    sleep(200);
+                }else{
+                    break;
+                }
+            }
+        }
     }
 
     int GameLoop::startGame() {
@@ -69,6 +84,7 @@ namespace Chaser {
             s.insertEntity(e);
             s.insertEntity(p);
             s.printScreen();
+            pauseGame(control);
             sleep(70);
             s.clearScreen();
             if(gameEnd(control))   return 0;

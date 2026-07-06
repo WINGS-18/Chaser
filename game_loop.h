@@ -15,6 +15,7 @@ namespace Chaser {
         const char c_keyGiver();        //returns the pressed key
         bool gameEnd(char key);     //did player intentionally end the game
         bool resultDisplay(const Enemy& e, const Player& p);        //displays the result
+        void pauseGame(char key);       //pauses the game
         int startGame();        //main game loop
     };
 
